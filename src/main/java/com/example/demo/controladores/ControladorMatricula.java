@@ -1,8 +1,7 @@
 package com.example.demo.controladores;
 
-
-import com.example.demo.modelos.Matricula;
-import com.example.demo.servicios.ServicioMatricula;
+import com.example.APISURAG8MATRICULAS.modelos.Matricula;
+import com.example.APISURAG8MATRICULAS.servicios.ServicioMatricula;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,7 +42,7 @@ public class ControladorMatricula {
         }
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("{/id}")
     public ResponseEntity<?> controladorBuscarPorId(@PathVariable Integer id){
         try{
             return ResponseEntity

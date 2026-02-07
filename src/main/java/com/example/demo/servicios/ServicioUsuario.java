@@ -1,16 +1,12 @@
 package com.example.demo.servicios;
 
-
-import com.example.demo.modelos.Usuario;
-import com.example.demo.repositorios.IRepositorioUsuario;
+import com.example.APISURAG8USUARIOS.modelos.Usuario;
+import com.example.APISURAG8USUARIOS.repositorios.IRepositorioUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-
-@Service
 public class ServicioUsuario {
 
     //El servicio utiliza al repositorio

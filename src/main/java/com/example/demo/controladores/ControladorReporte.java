@@ -1,8 +1,7 @@
 package com.example.demo.controladores;
 
-
-import com.example.demo.modelos.Reporte;
-import com.example.demo.servicios.ServicioReporte;
+import com.example.APISuraG8ReportesEstadisticos.Servicios.ServicioReporte;
+import com.example.APISuraG8ReportesEstadisticos.modelos.Reporte;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/apisura8/v1/reportes")
-public class ControladorReporte {
+public class controladorReporte {
 
     //EntPoint son los nombres que se le dan a los servicios que ofrece el API
     //Inyectemos la dependencia

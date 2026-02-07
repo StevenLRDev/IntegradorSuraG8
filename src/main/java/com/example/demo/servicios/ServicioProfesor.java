@@ -1,8 +1,7 @@
 package com.example.demo.servicios;
 
-
-import com.example.demo.modelos.Profesor;
-import com.example.demo.repositorios.IRepositorioProfesor;
+import com.example.APISURAG8PROFESORES.modelos.Profesor;
+import com.example.APISURAG8PROFESORES.repositorios.IRepositorioProfesor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +16,7 @@ public class ServicioProfesor {
 
     //inyectar
     @Autowired
-    com.example.demo.repositorios.IRepositorioProfesor repositorio;
+    IRepositorioProfesor repositorio;
 
     //se crean funciones publicas para activar cada consulta que se quiera ofrecer
     //3 funciones

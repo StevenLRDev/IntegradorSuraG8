@@ -1,8 +1,7 @@
 package com.example.demo.servicios;
 
-
-import com.example.demo.modelos.Reporte;
-import com.example.demo.repositorios.IRepositorioReporte;
+import com.example.APISuraG8ReportesEstadisticos.Repositorios.IRepositorioReporte;
+import com.example.APISuraG8ReportesEstadisticos.modelos.Reporte;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

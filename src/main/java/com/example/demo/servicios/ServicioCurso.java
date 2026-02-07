@@ -1,8 +1,7 @@
 package com.example.demo.servicios;
 
-
-import com.example.demo.modelos.Curso;
-import com.example.demo.repositorios.IRepositorioCurso;
+import com.example.APISURAG8CURSOS.modelos.Curso;
+import com.example.APISURAG8CURSOS.repositorios.IrepositorioCurso;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +14,7 @@ public class ServicioCurso {
     // el servicio utiliza al repositorio, a este uso se le llama inyeccion de dependencia
 
     @Autowired
-    IRepositorioCurso repositorio;
+    IrepositorioCurso repositorio;
 
     //se crean funciones publicas para activar cada consulta que se quiera ofrecer
 

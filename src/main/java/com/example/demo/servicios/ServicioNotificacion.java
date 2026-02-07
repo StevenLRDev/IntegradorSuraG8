@@ -10,30 +10,41 @@ import java.util.Optional;
 
 @Service
 public class ServicioNotificacion {
-
-    //EL SERVICIO UTILIZA AL REPOSITORIO
-    //A ESTE USO SE LE LLAMA INYECCION DE DEPENDENCIA
-
+    // El servicio utiliza al repositorio
+    // A este uso se le llama inyección de dependencias
     @Autowired
     IRepositorioNotificacion repositorio;
-
-    //se crean funciones publicas para activar cada consulta que se quiera ofrecer
-
+    // Se crean funciones públicas para activar cada consulta que se quiera ofrecer
+    /**
+     * Guardar una nueva notificación o actualizar una existente
+     * @param datos Notificación a guardar
+     * @return Notificación guardada con ID asignado
+     */
     public Notificacion guardar(Notificacion datos) {
         return this.repositorio.save(datos);
     }
-
-    public List<Notificacion> buscarTodos(){
+    /**
+     * Buscar todas las notificaciones en la base de datos
+     * @return Lista de todas las notificaciones
+     */
+    public List<Notificacion> buscarTodos() {
         return this.repositorio.findAll();
     }
-
+    /**
+     * Buscar una notificación por su ID
+     * @param id ID de la notificación a buscar
+     * @return Notificación encontrada
+     * @throws Exception Si no se encuentra la notificación
+     */
     public Notificacion buscarPorId(Integer id) throws Exception {
-        //1. Para buscar por id, 1ero debo utilizar la clase "optional" de Java
-        Optional<Notificacion> notificacionBuscado=this.repositorio.findById(id);
-        if (notificacionBuscado.isPresent()){
-            return notificacionBuscado.get();
-        }else {
-            throw new Exception("No se encontro el () buscado");
+        // 1. Para buscar por ID primero debemos utilizar la clase Optional de Java
+        Optional<Notificacion> notificacionBuscada = this.repositorio.findById(id);
+
+        // 2. Verificar si la notificación existe
+        if (notificacionBuscada.isPresent()) {
+            return notificacionBuscada.get();
+        } else {
+            throw new Exception("No se encontró la notificación buscada");
         }
     }
 }

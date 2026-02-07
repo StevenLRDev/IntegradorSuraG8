@@ -7,52 +7,50 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
-@RequestMapping("/apisura8/v1/notificacion")
-
+@RequestMapping("/apisura8/v1/notificaciones")
 public class ControladorNotificacion {
-
-    //Inyectamos la dependencia
+    // ===== INYECCIÓN DE DEPENDENCIAS =====
     @Autowired
-    ServicioNotificacion servicio;
-
-    //Llamamos a cada servicio
-
-    @PatchMapping
-    public ResponseEntity<?> controladorGuardar(@RequestBody Notificacion datos){
-        try{
+    private ServicioNotificacion servicio;
+    // ===== GUARDAR NOTIFICACIÓN =====
+    @PostMapping
+    public ResponseEntity<?> controladorGuardar(@RequestBody Notificacion datos) {
+        try {
             return ResponseEntity
                     .status(HttpStatus.OK)
                     .body(this.servicio.guardar(datos));
-        }catch (Exception error){
+        } catch (Exception error) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
                     .body(error.getMessage());
         }
     }
+    // ===== BUSCAR TODAS LAS NOTIFICACIONES =====
     @GetMapping
-    public ResponseEntity<?> controladorBuscarTodos(){
-        try{
+    public ResponseEntity<?>controladorBuscarTodos() {
+        try {
             return ResponseEntity
                     .status(HttpStatus.OK)
                     .body(this.servicio.buscarTodos());
-        }catch (Exception error){
+        } catch (Exception error) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
                     .body(error.getMessage());
         }
     }
+    // ===== BUSCAR NOTIFICACIÓN POR ID =====
     @GetMapping("/{id}")
-    public ResponseEntity<?> controladorBuscarPorId(@PathVariable Integer id){
-        try{
+    public ResponseEntity<?> controladorBuscarPorId(@PathVariable Integer id) {
+        try {
             return ResponseEntity
                     .status(HttpStatus.OK)
                     .body(this.servicio.buscarPorId(id));
-        }catch (Exception error){
+        } catch (Exception error) {
             return ResponseEntity
                     .status(HttpStatus.BAD_REQUEST)
                     .body(error.getMessage());
         }
     }
-
 }

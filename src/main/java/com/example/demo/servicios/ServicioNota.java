@@ -1,9 +1,8 @@
 package com.example.demo.servicios;
 
 
-
-import com.example.demo.modelos.Nota;
-import com.example.demo.repositorios.IRepositorioNota;
+import com.example.APISURAG8NOTAS.modelos.Nota;
+import com.example.APISURAG8NOTAS.repositorios.IRepositorioNota;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

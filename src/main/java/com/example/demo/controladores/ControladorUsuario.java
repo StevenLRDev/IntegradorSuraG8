@@ -1,8 +1,7 @@
 package com.example.demo.controladores;
 
-
-import com.example.demo.modelos.Usuario;
-import com.example.demo.servicios.ServicioUsuario;
+import com.example.APISURAG8USUARIOS.modelos.Usuario;
+import com.example.APISURAG8USUARIOS.servicios.ServicioUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,8 +1,7 @@
 package com.example.demo.servicios;
 
-
-import com.example.demo.modelos.Matricula;
-import com.example.demo.repositorios.IRepositorioMatricula;
+import com.example.APISURAG8MATRICULAS.modelos.Matricula;
+import com.example.APISURAG8MATRICULAS.repositorios.IRepositorioMatricula;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
