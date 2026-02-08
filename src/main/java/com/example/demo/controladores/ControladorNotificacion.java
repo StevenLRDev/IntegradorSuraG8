@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/apisura8/v1/notificaciones")
+@CrossOrigin("http://localhost:3000")
 public class ControladorNotificacion {
     // ===== INYECCIÓN DE DEPENDENCIAS =====
     @Autowired
